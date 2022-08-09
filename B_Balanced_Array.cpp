@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+#define all(n) (n).begin(), (n).end()
+using namespace std;
+typedef long long int ll;
+int main()
+{
+    int t; cin >> t;
+    while(t--){
+        int n;
+        cin >> n;
+        if((n/2)%2 != 0){
+            cout << "NO\n";
+        }
+        else{
+            cout <<"YES\n";
+            for(int i = 1; i <= n/2; i++){
+                cout << 2*i << " ";
+            }
+            for(int i = 1; i <= n/2; i++){
+                if(i != n/2){
+                    cout << 2*i - 1 << " ";
+                }
+                else{
+                    cout << (2*i - 1) + n/2 << "\n";
+                    /* adding n/2 in last element to make it equalto half array */
+                }
+            }
+        }
+    }
+    return 0;
+}
